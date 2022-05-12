@@ -1,17 +1,28 @@
-import "./App.css";
-import { Canvas } from "@react-three/fiber";
-import Box from "./components/3D/Box/Box";
-import { OrbitControls } from "@react-three/drei";
+import styled from "styled-components";
+import TextSection from "./components/Title/Title";
+import Scene3D from "./components/3D/Scene3D";
+
+const Wrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #322d6d 6.33%, #663182 39.13%);
+  text-align: center;
+  overflow: hidden;
+  canvas {
+    width:100%;
+    height:600px;
+  }
+`;
+
 function App() {
   return (
-    <div className="App">
-      <Canvas>
-        <OrbitControls enableZoom={false}/>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[-2, 5, 2]} intensity={1} />
-        <Box />
-      </Canvas>
-    </div>
+    <Wrapper className="App">
+      <TextSection />
+      
+      <Scene3D />
+      
+    </Wrapper>
   );
 }
 

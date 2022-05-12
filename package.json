@@ -10,8 +10,11 @@
   "dependencies": {
     "@react-three/drei": "^9.7.1",
     "@react-three/fiber": "^8.0.14",
+    "dat.gui": "^0.7.9",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-three-gui": "^0.4.2",
+    "styled-components": "^5.3.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.0",
