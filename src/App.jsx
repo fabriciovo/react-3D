@@ -10,8 +10,8 @@ const Wrapper = styled.div`
   text-align: center;
   overflow: hidden;
   canvas {
-    width:100%;
-    height:600px;
+    width: 100%;
+    height: 600px;
   }
 `;
 
@@ -19,9 +19,7 @@ function App() {
   return (
     <Wrapper className="App">
       <TextSection />
-      
       <Scene3D />
-      
     </Wrapper>
   );
 }

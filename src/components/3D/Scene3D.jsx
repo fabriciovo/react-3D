@@ -8,6 +8,7 @@ import AnimationBox from "./AnimationBox";
 import Triangle from "./Triangle";
 import Iphone from "./Iphone";
 import Sonic from "./Sonic";
+import { Link } from "react-router-dom";
 
 const objects = [
   <SimpleBox />,
@@ -30,14 +31,13 @@ function Scene3D() {
     <div>
       <button onClick={() => setIndex((prev) => prev + 1)}>Change Model</button>
       <br />
-      <button>Create your 3D World!</button>
+      <Link to="/sandbox">Create your 3D World!</Link>
       <Canvas>
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} intensity={1} />
         <OrbitControls enableZoom={false} />
         <DisplayObjects object={objects[index]} />
       </Canvas>
-      <button>Create your 3D World!</button>
     </div>
   );
 }
